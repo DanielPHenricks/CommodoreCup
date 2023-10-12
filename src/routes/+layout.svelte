@@ -3,6 +3,7 @@
 	import "./styles.css";
 	import MissionStatement from "./MissionStatement.svelte";
 	import Goals from "./Goals.svelte";
+	import CardComponent from "./CardComponent.svelte";
 </script>
 
 <div class="app">
@@ -11,10 +12,11 @@
 		<div class="mainPanel">
 			<MissionStatement />
 		</div>
-		<div>
-			<Goals />
-		</div>
 	</div>
+	<main>
+		<CardComponent />
+		<slot />
+	</main>
 </div>
 
 <style>
@@ -22,7 +24,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px;
+		padding: 40px;
 	}
 	.bgImage {
 		background: url("images/Vandy.jpg") no-repeat center center fixed;
